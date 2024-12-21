@@ -34,7 +34,9 @@ const QueryProvider = ({
   const persistOptions = {persister: asyncStoragePersister, maxAge: Infinity};
 
   return (
-    <PersistQueryClientProvider client={queryClient} persistOptions={persistOptions}>
+    <PersistQueryClientProvider
+      client={queryClient}
+      persistOptions={persistOptions}>
       <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
     </PersistQueryClientProvider>
   );

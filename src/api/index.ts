@@ -1,6 +1,6 @@
-import { Alert } from 'react-native';
-import { create } from 'apisauce';
-import { API_VERSION, BASE_URL } from './paths';
+import {Alert} from 'react-native';
+import {create} from 'apisauce';
+import {API_VERSION, BASE_URL} from './paths';
 
 // API calling configs
 const api = create({
