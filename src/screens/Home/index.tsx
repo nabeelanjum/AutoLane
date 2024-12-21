@@ -10,6 +10,7 @@ const Home: React.FC = () => {
   return (
     <View style={styles.container}>
       <FlatList
+        contentContainerStyle={styles.list}
         data={data}
         renderItem={({item}) => <CarStatusTile item={item} />}
         keyExtractor={item => item.id}

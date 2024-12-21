@@ -1,8 +1,11 @@
 import React, {useMemo} from 'react';
+import {View} from 'react-native';
 import {CarStatusItem} from '../../hooks/queries/types';
-import {Text, TouchableOpacity, View} from 'react-native';
-import styles from './styles';
 import {statusStringMap} from './types';
+import AppText from '../shared/AppText';
+import AppButton from '../shared/AppButton';
+import colors from '../../common/colors';
+import useStyles from './styles';
 
 interface Props {
   item: CarStatusItem;
@@ -14,13 +17,21 @@ const CarStatusTile: React.FC<Props> = ({item}) => {
     [item.status],
   );
 
+  const buttonLabel = useMemo(() => {
+    return isCarMoving ? 'See on map' : 'Send car';
+  }, [isCarMoving]);
+
+  const styles = useStyles(isCarMoving);
+
   return (
     <View style={styles.container}>
       <View style={styles.carDetails}>
-        <Text>{item.carNumber}</Text>
-        <Text>{statusStringMap[item.status]}</Text>
+        <AppText size={18} bold>
+          {statusStringMap[item.status]}
+        </AppText>
+        <AppText color={colors.fontSecondary}>{item.carNumber}</AppText>
       </View>
-      {isCarMoving && <TouchableOpacity>See on map</TouchableOpacity>}
+      <AppButton style={styles.mapButton} label={buttonLabel} />
     </View>
   );
 };
