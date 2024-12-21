@@ -1,11 +1,14 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import RootNavigation from './navigation';
+import QueryProvider from './api/QueryProvider';
 
 const App: React.FC = () => {
   return (
     <View style={styles.container}>
-      <RootNavigation />
+      <QueryProvider>
+        <RootNavigation />
+      </QueryProvider>
     </View>
   );
 };

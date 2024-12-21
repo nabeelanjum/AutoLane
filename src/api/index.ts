@@ -16,15 +16,13 @@ api.addResponseTransform(async response => {
   if (!response.ok) {
     // More sophisticated error messages could be thrown to user in real world scenario having a contract b/w API and frontend of course
     if (response.status === 401 || response.status === 403) {
-      Alert.alert('Unauthorized');
+      Alert.alert('Unauthorized'); // TODO: show error nicely in a toast or something
+      // TODO: logout user from the app
+    } else {
+      Alert.alert('Something went wrong'); // TODO: show error nicely in a toast or something
     }
-    else {
-      Alert.alert('Something went wrong');
-    }
-    throw new Error(response.problem);
+    // TODO: Log error using a error logging service like sentry etc
   }
-
-  // If the response is okay, just return it
   return response;
 });
 

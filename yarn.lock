@@ -2023,6 +2023,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react-native-async-storage/async-storage@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "@react-native-async-storage/async-storage@npm:2.1.0"
+  dependencies:
+    merge-options: ^3.0.4
+  peerDependencies:
+    react-native: ^0.0.0-0 || >=0.65 <1.0
+  checksum: bc6cdf3554fdd09f3e7916b105d966e56dbaca48475f33da378dd40c3823f7a6978057ca8207bc161c8e0b8c2b08161797dab48955bce1f3e3e457aeaa4ffaf9
+  languageName: node
+  linkType: hard
+
 "@react-native-community/cli-clean@npm:15.0.1":
   version: 15.0.1
   resolution: "@react-native-community/cli-clean@npm:15.0.1"
@@ -2566,6 +2577,54 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tanstack/query-async-storage-persister@npm:^5.62.8":
+  version: 5.62.8
+  resolution: "@tanstack/query-async-storage-persister@npm:5.62.8"
+  dependencies:
+    "@tanstack/query-persist-client-core": 5.62.8
+  checksum: 4b2f0acb327ce61c3a741ec9e312b7155881b4c7e032209ee102b6023aa65310000046f30a21af4b9af228a0c3f91f54f1658facb97bfee3dd6204c5fc2c8263
+  languageName: node
+  linkType: hard
+
+"@tanstack/query-core@npm:5.62.8":
+  version: 5.62.8
+  resolution: "@tanstack/query-core@npm:5.62.8"
+  checksum: d203a4062d271dce5f18c472d7a32e61ce3ae2a696a87f934ef306e562f6cdd72ae1f93c5e81f08567d66e7ae11a7be08622a239415dbca773015777b78b03e6
+  languageName: node
+  linkType: hard
+
+"@tanstack/query-persist-client-core@npm:5.62.8":
+  version: 5.62.8
+  resolution: "@tanstack/query-persist-client-core@npm:5.62.8"
+  dependencies:
+    "@tanstack/query-core": 5.62.8
+  checksum: dc971c9200a918fdef5784ec4e7d6914b62c43f2d41004f9e1b8491eba8a0c0a77c941cc6bbf5dad1e1775dce4e4c333aee9e1948214dd36666cb456aa97a1bc
+  languageName: node
+  linkType: hard
+
+"@tanstack/react-query-persist-client@npm:^5.62.8":
+  version: 5.62.8
+  resolution: "@tanstack/react-query-persist-client@npm:5.62.8"
+  dependencies:
+    "@tanstack/query-persist-client-core": 5.62.8
+  peerDependencies:
+    "@tanstack/react-query": ^5.62.8
+    react: ^18 || ^19
+  checksum: a0d32065a196a2992c34cee4138b1cbb43a6ff0dfbcb8bb0714ed9f46ff2b784e610dcdff3769edad59f7e08818fcf3c6cc7c05ae7ec746e0f474ed56c5518e5
+  languageName: node
+  linkType: hard
+
+"@tanstack/react-query@npm:^5.62.8":
+  version: 5.62.8
+  resolution: "@tanstack/react-query@npm:5.62.8"
+  dependencies:
+    "@tanstack/query-core": 5.62.8
+  peerDependencies:
+    react: ^18 || ^19
+  checksum: c1e2773c261dcf6527d57906b0f4ba9302d617515fcd092ef205cf7d2ec4c46d9c121d3e79a044341f26de6b2839981011e34343b572466d2c514e46fef5bcd9
+  languageName: node
+  linkType: hard
+
 "@types/babel__core@npm:^7.1.14":
   version: 7.20.5
   resolution: "@types/babel__core@npm:7.20.5"
@@ -2940,6 +2999,7 @@ __metadata:
     "@babel/core": ^7.25.2
     "@babel/preset-env": ^7.25.3
     "@babel/runtime": ^7.25.0
+    "@react-native-async-storage/async-storage": ^2.1.0
     "@react-native-community/cli": 15.0.1
     "@react-native-community/cli-platform-android": 15.0.1
     "@react-native-community/cli-platform-ios": 15.0.1
@@ -2949,6 +3009,9 @@ __metadata:
     "@react-native/typescript-config": 0.76.5
     "@react-navigation/native": ^7.0.14
     "@react-navigation/stack": ^7.1.1
+    "@tanstack/query-async-storage-persister": ^5.62.8
+    "@tanstack/react-query": ^5.62.8
+    "@tanstack/react-query-persist-client": ^5.62.8
     "@types/react": ^18.2.6
     "@types/react-test-renderer": ^18.0.0
     apisauce: ^3.1.0
@@ -5798,6 +5861,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"is-plain-obj@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "is-plain-obj@npm:2.1.0"
+  checksum: cec9100678b0a9fe0248a81743041ed990c2d4c99f893d935545cfbc42876cbe86d207f3b895700c690ad2fa520e568c44afc1605044b535a7820c1d40e38daa
+  languageName: node
+  linkType: hard
+
 "is-plain-object@npm:^2.0.4":
   version: 2.0.4
   resolution: "is-plain-object@npm:2.0.4"
@@ -6896,6 +6966,15 @@ __metadata:
   version: 5.2.1
   resolution: "memoize-one@npm:5.2.1"
   checksum: a3cba7b824ebcf24cdfcd234aa7f86f3ad6394b8d9be4c96ff756dafb8b51c7f71320785fbc2304f1af48a0467cbbd2a409efc9333025700ed523f254cb52e3d
+  languageName: node
+  linkType: hard
+
+"merge-options@npm:^3.0.4":
+  version: 3.0.4
+  resolution: "merge-options@npm:3.0.4"
+  dependencies:
+    is-plain-obj: ^2.1.0
+  checksum: d86ddb3dd6e85d558dbf25dc944f3527b6bacb944db3fdda6e84a3f59c4e4b85231095f58b835758b9a57708342dee0f8de0dffa352974a48221487fe9f4584f
   languageName: node
   linkType: hard
 
