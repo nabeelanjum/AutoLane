@@ -17,6 +17,7 @@ const LiveMap: React.FC<RootScreenProps<HomeRoutes.LiveMap>> = ({route}) => {
 
   const {coordinate} = useCoordinatesSocket(coordinates);
 
+  // Animate the map when coordinate changes
   useEffect(() => {
     mapRef.current?.animateToRegion({
       ...coordinate,

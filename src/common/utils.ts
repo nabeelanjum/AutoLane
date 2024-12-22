@@ -1,5 +1,6 @@
 import {Coordinate} from './types';
 
+// Generate 1000 coordinates with a minor difference from the starting point
 export const generateCoordinates = (
   startingCoordinates: Coordinate,
   numPoints = 1000,
