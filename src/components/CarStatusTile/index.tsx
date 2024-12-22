@@ -7,7 +7,7 @@ import AppText from '../shared/AppText';
 import AppButton from '../shared/AppButton';
 import colors from '../../common/colors';
 import useStyles from './styles';
-import {HomeRoutes} from '../../navigation/routes';
+import {HomeRoutes} from '../../navigation/types';
 
 interface Props {
   item: CarStatusItem;
@@ -27,11 +27,13 @@ const CarStatusTile: React.FC<Props> = ({item}) => {
 
   const handleOnPress = useCallback(() => {
     if (isCarMoving) {
-      navigation.navigate(HomeRoutes.LiveMap);
+      navigation.navigate(HomeRoutes.LiveMap, {
+        initialCoordinates: item.coordinates,
+      });
     } else {
       Alert.alert('Under Construction');
     }
-  }, [isCarMoving, navigation]);
+  }, [isCarMoving, item.coordinates, navigation]);
 
   const styles = useStyles(isCarMoving);
 
